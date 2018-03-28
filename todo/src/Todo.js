@@ -18,7 +18,7 @@ const Todo = ({ id, note }) => ({
   note,
   destroy() {
     return new Promise((resolve) => {
-      delete todoIds[this.id];
+      delete todoById[this.id];
       todoIds.splice(todoIds.indexOf(this.id), 1);
       resolve();
     }, DELAY);
